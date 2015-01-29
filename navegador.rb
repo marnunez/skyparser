@@ -16,7 +16,7 @@ class Navegador
 		@driver.navigate.to("http://www.skyscanner.net/transport/flights/#{@ciudad1}/#{@ciudad2}/#{@fecha.strftime('%y%m%d')}/")
 		wait = Selenium::WebDriver::Wait.new(:timeout => 15) # seconds
 		wait.until { driver.find_element(:class, "mainquote-price").displayed? }
-		return @driver.find_element(:class, "mainquote-price").text.gsub(/[\D]/,'')
+		return @driver.find_element(:class, "mainquote-price").text.gsub(/[\D]/,'').to_i
 	end
 end
 
