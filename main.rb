@@ -2,6 +2,10 @@
 
 load 'navegador.rb'
 
+
+hash_ciudades = {:madrid => ['mad',3]}
+
+
 def fill_lista
 	lista = []
 	d = Navegador.new()
